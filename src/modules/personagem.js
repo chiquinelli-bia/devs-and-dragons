@@ -13,3 +13,10 @@ export class personagem {
     return `${this.tipo} iniciante `;
   }
 }
+export class mago {
+  constructor(elementoMagico, levelMagico, inteligencia) {
+    this.elementoMagico = elementoMagico;
+    this.levelMagico = levelMagico;
+    this.inteligencia = inteligencia;
+  }
+}
