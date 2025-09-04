@@ -41,3 +41,27 @@ export class arqueiro extends personagem {
     return super.obterInsignia();
   }
 }
+export class arqueiroMago extends personagem {
+  constructor(
+    nome,
+    level,
+    destreza,
+    pontaria,
+    elementoMagico,
+    levelMagico,
+    inteligencia
+  ) {
+    super(nome, "ArqueiroMago", level);
+    this.ladoArqueiro = new arqueiro(nome, level, destreza, pontaria);
+    this.ladoMago = new mago(
+      nome,
+      level,
+      elementoMagico,
+      levelMagico,
+      inteligencia
+    );
+  }
+  obterInsignia() {
+    return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`;
+  }
+}
