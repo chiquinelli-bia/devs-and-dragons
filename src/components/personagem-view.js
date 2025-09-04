@@ -1,4 +1,8 @@
 export class personagemView {
+  constructor(personagens) {
+    this.ulPersonagens = document.querySelector("ul#personagens");
+    this.personagens = personagens;
+  }
   render() {
     this.ulPersonagens.innerHTML = "";
     this.personagens.forEach((personagem) => {
@@ -9,7 +13,10 @@ export class personagemView {
 
   criaPersonagem = (personagem) => {
     const personagemLI = document.createElement("li");
-    personagemLI.classList.add("personagem");
+    console.log(personagemLI);
+    console.log(personagem.tipo);
+    console.log(typeof personagem.tipo);
+    personagemLI.classList.add("personagem", personagem.tipo);
 
     //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
 
@@ -21,7 +28,7 @@ export class personagemView {
                 <div class="combate"></div>
                 <div class="level">
                     <button class="diminuir-level">-</button>
-                    <p class="level-texto">Level </p>
+                    <p class="level-texto">Level ${personagem.level}</p>
                     <button class="aumentar-level">+</button>
                 </div>
             </div>
@@ -32,18 +39,18 @@ export class personagemView {
                 </div>
             </div>
             <div class="container-nome">
-                <h3 class="nome"></h3>
+                <h3 class="nome">${personagem.nome}</h3>
             </div>
             <div class="container-descricao">
-                <p class="descricao"></p>
+                <p class="descricao">${personagem.descricao}</p>
             </div>
         </div>
         <div class="container-inferior">
             <img src="./src/assets/img/icone-mana.png" class="icone-mana">
-            <p class="insignia"></p>
+            <p class="insignia">${personagem.obterInsignia()}</p>
             <img src="./src/assets/img/icone-vida.png" class="icone-vida">
-            <h4 class="mana"></h4>
-            <h4 class="vida"></h4>
+            <h4 class="mana">${personagem.mana}</h4>
+            <h4 class="vida">${personagem.vida}</h4>
         </div>
         `;
 
