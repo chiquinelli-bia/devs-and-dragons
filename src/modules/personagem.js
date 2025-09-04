@@ -14,10 +14,30 @@ export class personagem {
     return `${this.tipo} iniciante `;
   }
 }
-export class mago {
-  constructor(elementoMagico, levelMagico, inteligencia) {
+export class mago extends personagem {
+  constructor(nome, level, elementoMagico, levelMagico, inteligencia) {
+    super(nome, "Mago", level);
     this.elementoMagico = elementoMagico;
     this.levelMagico = levelMagico;
     this.inteligencia = inteligencia;
+  }
+  obterInsignia() {
+    if (this.level >= 10 && this.levelMagico >= 5 && this.inteligencia >= 5) {
+      return `Mestre do ${this.elementoMagico}`;
+    }
+    return super.obterInsignia();
+  }
+}
+export class arqueiro extends personagem {
+  constructor(nome, level, destreza, pontaria) {
+    super(nome, "Arqueiro", level);
+    this.destreza = destreza;
+    this.pontaria = pontaria;
+  }
+  obterInsignia() {
+    if (this.level >= 10 && this.destreza >= 5 && this.pontaria >= 5) {
+      return `Dominador de flechas`;
+    }
+    return super.obterInsignia();
   }
 }
