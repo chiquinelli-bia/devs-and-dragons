@@ -13,10 +13,7 @@ export class personagemView {
 
   criaPersonagem = (personagem) => {
     const personagemLI = document.createElement("li");
-    console.log(personagemLI);
-    console.log(personagem.tipo);
-    console.log(typeof personagem.tipo);
-    personagemLI.classList.add("personagem", personagem.tipo);
+    personagemLI.classList.add("personagem", personagem.constructor.tipo);
 
     //const estaSelecionado = this.personagensSelecionados.indexOf(personagem) !== -1 //sintaxe para quando encontra no array
 
@@ -42,7 +39,7 @@ export class personagemView {
                 <h3 class="nome">${personagem.nome}</h3>
             </div>
             <div class="container-descricao">
-                <p class="descricao">${personagem.descricao}</p>
+                <p class="descricao">${personagem.constructor.descricao}</p>
             </div>
         </div>
         <div class="container-inferior">

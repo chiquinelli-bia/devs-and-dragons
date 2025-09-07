@@ -1,22 +1,26 @@
 export class personagem {
+  nome;
   vida = 100;
   mana = 100;
-  constructor(nome, tipo, level, descricao) {
+  level;
+  tipo;
+  descricao;
+  constructor(nome, level) {
     this.nome = nome;
-    this.tipo = tipo;
     this.level = level;
-    this.descricao = descricao;
   }
   obterInsignia() {
     if (this.level >= 5) {
-      return `Implacável ${this.tipo}`;
+      return `Implacável ${this.constructor.tipo}`;
     }
-    return `${this.tipo} iniciante `;
+    return `${this.constructor.tipo} iniciante `;
   }
 }
 export class mago extends personagem {
+  static tipo = "Mago";
+  static descricao = "O mago é implacável!";
   constructor(nome, level, elementoMagico, levelMagico, inteligencia) {
-    super(nome, "Mago", level);
+    super(nome, level);
     this.elementoMagico = elementoMagico;
     this.levelMagico = levelMagico;
     this.inteligencia = inteligencia;
@@ -29,12 +33,15 @@ export class mago extends personagem {
   }
 }
 export class arqueiro extends personagem {
+  static tipo = "Arqueiro";
+  static descricao = "Voce tem o meu arco!";
   constructor(nome, level, destreza, pontaria) {
-    super(nome, "Arqueiro", level);
+    super(nome, level);
     this.destreza = destreza;
     this.pontaria = pontaria;
   }
   obterInsignia() {
+    console.log(arqueiro.constructor.descricao);
     if (this.level >= 10 && this.destreza >= 5 && this.pontaria >= 5) {
       return `Dominador de flechas`;
     }
@@ -42,6 +49,8 @@ export class arqueiro extends personagem {
   }
 }
 export class arqueiroMago extends personagem {
+  static tipo = "ArqueiroMago";
+  static descricao = "Detentor de lancas e flechas mágicas!";
   constructor(
     nome,
     level,
@@ -51,7 +60,7 @@ export class arqueiroMago extends personagem {
     levelMagico,
     inteligencia
   ) {
-    super(nome, "ArqueiroMago", level);
+    super(nome, level);
     this.ladoArqueiro = new arqueiro(nome, level, destreza, pontaria);
     this.ladoMago = new mago(
       nome,
