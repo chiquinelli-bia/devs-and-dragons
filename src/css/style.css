@@ -7,7 +7,7 @@
 
 body {
   font-family: var(--fonte-textos);
-  background-image: url(../../../public/img/fundo-madeira.png);
+  background-image: url(/img/fundo-madeira.png);
   height: 100vh;
 }
 
@@ -129,7 +129,7 @@ header {
 }
 
 .container-tipo {
-  background-image: url(../../../public/img/tarja-azul.png);
+  background-image: url(/img/tarja-azul.png);
   background-repeat: no-repeat;
   height: 40px;
   width: 78%;
@@ -147,7 +147,7 @@ header {
 }
 
 .container-nome {
-  background-image: url(../../../public/img/fundo-nome.png);
+  background-image: url(/img/fundo-nome.png);
   background-repeat: no-repeat;
   height: 31.63px;
   width: 191px;
@@ -161,7 +161,7 @@ header {
 }
 
 .container-descricao {
-  background-image: url(../../../public/img/fundo-descricao.png);
+  background-image: url(/img/fundo-descricao.png);
   background-repeat: no-repeat;
   height: 92px;
   width: 191px;
@@ -219,15 +219,15 @@ header {
 /*Mago*/
 
 .Mago .container-superior {
-  background-image: url(../../../public/img/fundo-carta-verde.png);
+  background-image: url(/img/fundo-carta-verde.png);
 }
 
 .Mago .container-inferior {
-  background-image: url(../../../public/img/retangulo-verde.png);
+  background-image: url(/img/retangulo-verde.png);
 }
 
 .Mago .combate {
-  background-image: url(../../../public/img/combate-mago.png);
+  background-image: url(/img/combate-mago.png);
 }
 
 .Mago .level-texto {
@@ -235,22 +235,22 @@ header {
 }
 
 .Mago .imagem {
-  background-image: url(../../../public/img/mago.png);
+  background-image: url(/img/mago.png);
   background-repeat: no-repeat;
 }
 
 /*Arqueiro*/
 
 .Arqueiro .container-superior {
-  background-image: url(../../../public/img/fundo-carta-azul.png);
+  background-image: url(/img/fundo-carta-azul.png);
 }
 
 .Arqueiro .container-inferior {
-  background-image: url(../../../public/img/retangulo-azul.png);
+  background-image: url(/img/retangulo-azul.png);
 }
 
 .Arqueiro .combate {
-  background-image: url(../../../public/img/combate-arqueiro.png);
+  background-image: url(/img/combate-arqueiro.png);
 }
 
 .Arqueiro .level-texto {
@@ -258,22 +258,22 @@ header {
 }
 
 .Arqueiro .imagem {
-  background-image: url(../../../public/img/arqueiro.png);
+  background-image: url(/img/arqueiro.png);
   background-repeat: no-repeat;
 }
 
 /*Guerreiro*/
 
 .Guerreiro .container-superior {
-  background-image: url(../../../public/img/fundo-carta-vermelha.png);
+  background-image: url(/img/fundo-carta-vermelha.png);
 }
 
 .Guerreiro .container-inferior {
-  background-image: url(../../../public/img/retangulo-vermelho.png);
+  background-image: url(/img/retangulo-vermelho.png);
 }
 
 .Guerreiro .combate {
-  background-image: url(../../../public/img/combate-guerreiro.png);
+  background-image: url(/img/combate-guerreiro.png);
 }
 
 .Guerreiro .level-texto {
@@ -281,22 +281,22 @@ header {
 }
 
 .Guerreiro .imagem {
-  background-image: url(../../../public/img/guerreiro.png);
+  background-image: url(/img/guerreiro.png);
   background-repeat: no-repeat;
 }
 
 /*ArqueiroMago*/
 
 .ArqueiroMago .container-superior {
-  background-image: url(../../../public/img/fundo-carta-roxa.png);
+  background-image: url(/img/fundo-carta-roxa.png);
 }
 
 .ArqueiroMago .container-inferior {
-  background-image: url(../../../public/img/retangulo-roxo.png);
+  background-image: url(/img/retangulo-roxo.png);
 }
 
 .ArqueiroMago .combate {
-  background-image: url(../../../public/img/combate-arqueiro-Mago.png);
+  background-image: url(/img/combate-arqueiro-mago.png);
 }
 
 .ArqueiroMago .level-texto {
@@ -304,6 +304,6 @@ header {
 }
 
 .ArqueiroMago .imagem {
-  background-image: url(../../../public/img/arqueiro-mago.png);
+  background-image: url(/img/arqueiro-mago.png);
   background-repeat: no-repeat;
 }

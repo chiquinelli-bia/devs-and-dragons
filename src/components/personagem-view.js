@@ -34,7 +34,7 @@ export class personagemView {
       personagem.nome
     }</h3> </div> <div class="container-descricao"> <p class="descricao">${
       personagem.constructor.descricao
-    }</p> </div> </div> <div class="container-inferior"> <img src="./public/img/icone-mana.png" class="icone-mana"> <p class="insignia">${personagem.obterInsignia()}</p> <img src="./public/img/icone-vida.png" class="icone-vida"> <h4 class="mana">${
+    }</p> </div> </div> <div class="container-inferior"> <img src="/img/icone-mana.png" class="icone-mana"> <p class="insignia">${personagem.obterInsignia()}</p> <img src="/img/icone-vida.png" class="icone-vida"> <h4 class="mana">${
       personagem.mana
     }</h4> <h4 class="vida">${personagem.vida}</h4> </div>
     `;
