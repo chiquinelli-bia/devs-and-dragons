@@ -61,6 +61,21 @@ export class arqueiro extends personagem {
     return super.obterInsignia();
   }
 }
+export class guerreiro extends personagem {
+  static tipo = "Guerreiro";
+  static descricao = "Você será esmagado pela fúria do Guerreiro!";
+  constructor(nome, forca) {
+    super(nome);
+    this.forca = forca;
+  }
+  obterInsignia() {
+    console.log(guerreiro.constructor.descricao);
+    if (this.level >= 10 && this.forca >= 5) {
+      return `Guerreiro furioso`;
+    }
+    return super.obterInsignia();
+  }
+}
 export class arqueiroMago extends personagem {
   static tipo = "ArqueiroMago";
   static descricao = "Detentor de lancas e flechas mágicas!";
