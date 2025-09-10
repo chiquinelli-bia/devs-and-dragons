@@ -8,8 +8,19 @@ export class personagem {
   constructor(nome) {
     this.nome = nome;
   }
+  aumentarLevel() {
+    this.level += 1;
+  }
+  diminuirLevel() {
+    this.level -= 1;
+  }
   get level() {
     return this.#level;
+  }
+  set level(novoLevel) {
+    if (novoLevel >= 1 && novoLevel <= 20) {
+      this.#level = novoLevel;
+    }
   }
   obterInsignia() {
     if (this.#level >= 5) {
@@ -92,6 +103,8 @@ export class arqueiroMago extends personagem {
     this.ladoMago = new mago(nome, elementoMagico, levelMagico, inteligencia);
   }
   obterInsignia() {
+    this.ladoArqueiro.level = this.level;
+    this.ladoMago.level = this.level;
     return `${this.ladoArqueiro.obterInsignia()} e ${this.ladoMago.obterInsignia()}`;
   }
 }
