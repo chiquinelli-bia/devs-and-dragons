@@ -5,6 +5,7 @@
 **Descrição:**
 
 Projeto realizado durante o curso "JavaScript: classes e heranças no desenvolvimento de aplicações com orientação a objetos. Este repositório apresenta **minhas contribuições específicas** para o projeto.
+No Devs & Dragons, os personagens são criados a partir da classe base Personagem, que controla vida, mana e level. A partir dela surgem classes especializadas como Guerreiro, Mago e ArqueiroMago, cada uma com atributos e comportamentos próprios. As cartas de tipo trazem descrições estáticas e ajudam a diferenciar cada herói. Já a PersonagemView organiza os personagens para exibição, enquanto o sistema de duelo compara níveis e define o vencedor em batalhas interativas.
 
 ## Minhas Contribuições
 
